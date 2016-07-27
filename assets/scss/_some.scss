@@ -1,0 +1,185 @@
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+//start styles for header
+header {
+  padding: 30px 0 22px 0;
+}
+
+.header__logo {
+  display: block;
+}
+
+.logo-container {
+  float: left;
+}
+
+.header-button {
+  @extend %btn;
+  font-size: em(18);
+  margin-right: 2.5%;
+}
+
+.visit-site {
+  font-size: 18px;
+  text-decoration: underline;
+  color: $primarycolor;
+  float: right;
+  margin: 2% 7.7% 0 2%;
+  display: block;
+  position: relative;
+  &::before {
+    content: '';
+    width: 35px;
+    height: 27px;
+    background-image: url('assets/img/rounds.svg');
+    position: absolute;
+    left: -45px;
+    bottom: -3px;
+  }
+}
+
+.header-button {
+  float: right;
+  font-family: 'Roboto Slab';
+}
+
+//finish styles for header
+
+//start styles for slider
+
+
+.slider__wrapper {
+  //min-height: 556px;
+  position: relative;
+}
+
+.slide-1 {
+  background: #fff5f5; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #fff5f5 13%, #ffe1e1 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #fff5f5 13%,#ffe1e1 100%);
+  background: radial-gradient(ellipse at center, #fff5f5 13%,#ffe1e1 100%);
+}
+
+.slide-2 {
+  min-height: 556px !important;
+  background-color: #ffdada; /* Old browsers */
+  background-color: -moz-radial-gradient(center, ellipse cover, #ffdada 2%, #fec6c6 100%);
+  background-color: -webkit-radial-gradient(center, ellipse cover, #ffdada 2%,#fec6c6 100%);
+  background-color: radial-gradient(ellipse at center, #ffdada 2%,#fec6c6 100%);
+  background-image: url('assets/img/slide-2.png');
+  background-repeat: no-repeat;
+  background-size: 52% 88%;
+  background-position: 0% 102%;
+
+}
+
+
+.rings {
+  background-image: url('assets/img/slide-1.png');
+  background-repeat: no-repeat;
+  min-height: 556px;
+  background-size: contain;
+}
+
+.slick-arrow {
+  font-size: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 5000;
+  cursor: pointer;
+  border: 0;
+  left: 5%;
+  background: none;
+  &::before {
+    content: '>';
+    font-family: monospace;
+    width: 21px;
+    height: 39px;
+    font-size: 60px;
+    line-height: 0;
+    color: white;
+  }
+}
+
+.slick-prev {
+  &::before {
+    content: '<';
+  }
+}
+
+.slick-next {
+  right: 5%;
+  left: initial;
+}
+
+.slider__info {
+  margin-top: 88px;
+  width: 90%;
+  float: right;
+}
+.slide-title {
+  font-size: em(60);
+  color: $primarycolor;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.slide-caption {
+  color: #1d363f;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+.line {
+  border: 1.5px solid #ea9696;
+  margin: 45px 0 38px 0;
+  width: 16%;
+}
+.slide-text {
+  color: #383838;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.slide-title--mod  {
+  color: $primarycolor;
+}
+
+.slide-caption--mod {
+  color: #fefefe;
+}
+
+.slick-dots button {
+  border:none;
+  background: white;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: 0;
+  margin-right: 16px;
+
+}
+
+.slick-dots {
+  bottom: 80px;
+  left: 50%;
+  position: absolute;
+  @extend %ham;
+}
+
+
+.slick-dots .slick-active button{
+  background: $primarycolor;
+}
+
+.slick-dots li {
+  float: left;
+}
+
+.slick-dots {
+  @extend %clear;
+}
+
+//finish styles for slider
+

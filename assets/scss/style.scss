@@ -1,0 +1,16 @@
+
+ //Base Style
+@import "base/_mixin";		// миксины
+@import "base/_variables";	// переменные
+@import "base/_extend";		// расширения
+@import "base/_function";	// функции
+@import "base/_reset";		//
+@import "base/_grid";		// сетка
+
+//	Style
+@import "some";			    // стили основные
+@import "icons";		    // стили иконок
+@import "adaptive";			// стили адаптивки
+
+
+
