@@ -45,28 +45,28 @@ jQuery(document).ready(function($){
         var thanks = $('.js-thanks-modal');
         $('.registration-form').validate({
             submitHandler: function(form) {
-                $('.registration-form').submit(function () {
-                    $.ajax({
-                        type: "POST",
-                        url: "mail.php",
-                        data: $(this).serialize()
-                    }).done(function () {
-                        $(this).find("input").val("");
+                var data = $('.registration-form').serialize();
+                $.post(
+                    'mail.php',
+                    data,
+                    function(data) {
                         $('.modal').css('display','none');
-
+                        $('body').css('overflow','visible');
                         thanks.fadeIn(300);
                         setTimeout(function () {
                             thanks.fadeOut(300);
-                        }, 2000);
+                        }, 5000);
                         $(".registration-form").trigger("reset");
+                        return false;
                     });
-                    return false;
-                });
+
             }
+
         });
 
     $('.js-close-thank').on('click',function(e){
         $('.modal-thank').css('display','none');
+
     });
 
 });
