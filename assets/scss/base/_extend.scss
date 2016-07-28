@@ -64,7 +64,9 @@
   	background-color: $primarycolor;
   	border-radius: 3px;
 	@include transition(all , 0.5s);
-
+	&:hover {
+	  background-color: $hovercolor;
+	}
 }
 
 //-----------------
@@ -72,19 +74,6 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-}
-//-----------animation--------------
-%anim_hide {
-	margin-top: 30px;
-	visibility: hidden;
-	@include opacity(0);
-	//@include transition(margin $time ease,visibility $time ease,opacity $time ease);
-}
-
-%anim_show {
-	margin-top: 0;
-	visibility: visible;
-	@include opacity(1);
 }
 
 %clear {

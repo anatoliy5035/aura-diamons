@@ -1,4 +1,5 @@
 @include font-face(fontello,fontello);
+@include font-face(arrows,arrows);
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
@@ -14,15 +15,50 @@
   text-transform: none;
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
+  position: absolute;
+  font-size: 24px;
+  color: black;
 
 }
-.icon-location:before { content: '\e800'; }
-.icon-clock:before { content: '\e801'; }
-.icon-mail:before { content: '\e802'; }
-.icon-mobile:before { content: '\e803'; }
-.icon-facebook:before { content: '\f09a'; }
-.icon-gplus:before { content: '\f0d5'; }
-.icon-twitter:before { content: '\f302'; }
-.icon-pinterest:before { content: '\f312'; }
+
+.icon-location:before {
+  content: '\e800';
+}
+
+.icon-clock:before {
+  content: '\e801';
+}
+
+.icon-mail:before {
+  content: '\e802';
+}
+
+.icon-mobile:before {
+  content: '\e803';
+}
+
+.icon-facebook:before {
+  content: '\f09a';
+  font-size: 29px;
+}
+
+.icon-gplus:before {
+  content: '\f0d5';
+  font-size: 29px;
+}
+
+.icon-twitter:before {
+  content: '\f302';
+  font-size: 29px;
+}
+
+.icon-pinterest:before {
+  content: '\f312';
+  font-size: 29px;
+}
+
+.social-but:hover i::before{
+  color: rgba(0, 0, 0, 0.61);
+}
 
 
