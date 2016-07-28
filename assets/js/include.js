@@ -59,7 +59,15 @@ jQuery(document).ready(function($){
                         $(".registration-form").trigger("reset");
                         return false;
                     }).fail(function() {
-                        alert( "error" );
+                        //imitalion on github
+                        $('.modal').css('display','none');
+                        $('body').css('overflow','visible');
+                        thanks.fadeIn(300);
+                        setTimeout(function () {
+                            thanks.fadeOut(300);
+                        }, 5000);
+                        $(".registration-form").trigger("reset");
+                        return false;
                     });
 
             }
