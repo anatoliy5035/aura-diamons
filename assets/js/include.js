@@ -58,6 +58,8 @@ jQuery(document).ready(function($){
                         }, 5000);
                         $(".registration-form").trigger("reset");
                         return false;
+                    }).fail(function() {
+                        alert( "error" );
                     });
 
             }
