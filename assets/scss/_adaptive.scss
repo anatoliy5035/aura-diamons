@@ -14,6 +14,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+  .contacts iframe {
+    pointer-events: none;
+  }
   .modal__dialog {
     width: 500px;
     -webkit-transform: translate(0,36%) !important;

@@ -58,5 +58,13 @@ gulp.task('watch', function(){
     });
 });
 
+gulp.task('autoprefix', function () {
+    return gulp.src('style.css')
+        .pipe(autoprefixer({
+            browsers: ['last 3 version', "> 1%", "ie 8", "ie 7"],
+            cascade: false
+        }))
+        .pipe(gulp.dest(''));
+});
 
 gulp.task('default', ['sass:build', 'server', 'watch']);
