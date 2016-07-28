@@ -1214,6 +1214,8 @@ header {
     margin-top: 2%; } }
 
 @media only screen and (max-width: 767px) {
+  .testimonials__title {
+    font-size: 35px; }
   .footer {
     text-align: center; }
   .footer__copyright {
@@ -1286,8 +1288,7 @@ header {
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 360px) {
-  .testimonials__title {
-    font-size: 35px; } }
+ }
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
